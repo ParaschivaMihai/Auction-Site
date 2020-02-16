@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/admin.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <%- include('partials/linknav'); %>
+        <br>
+        <h6>Esti conectat ca <%= nume %></h6>
+        <br>
+        <%- include('partials/tableViewing'); %>
+        
+        <form id = "add" action = "/adminPage/adaugaModel" method = "post">
+            <h3>
+             Adauga model
+            </h3>
+            <br>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nume model</label>
+              <input type="text" class="form-control" name="nume_model" aria-describedby="emailHelp" >
+            </div>
+    
+            <div class="form-group">
+              <label for="exampleInputEmail1">Model procesor</label>
+              <input type="text" class="form-control" name="model_procesor" aria-describedby="emailHelp" >
+            </div>
+            
+            <div class="form-group">
+              <label for="exampleInputEmail1">Marime ecran</label>
+              <input type="text" class="form-control" name="marime_ecran" aria-describedby="emailHelp" >
+            </div>
+    
+            <div class="form-group">
+              <label for="exampleInputEmail1">Camera</label>
+              <input type="text" class="form-control" name="camera" aria-describedby="emailHelp" >
+            </div>
+    
+            <div class="form-group">
+              <label for="exampleInputEmail1">Memorie ram</label>
+              <input type="text" class="form-control" name="memorie_ram" aria-describedby="emailHelp" >
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Memorie</label>
+                <input type="text" class="form-control" name="memorie" aria-describedby="emailHelp" >
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Sistem operare</label>
+                <input type="text" class="form-control" name="sistem_operare" aria-describedby="emailHelp">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Capacitate baterie</label>
+                <input type="text" class="form-control" name="capacitate_baterie" aria-describedby="emailHelp" >
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Data lansare</label>
+                <input type="text" class="form-control" name="data_lansare" aria-describedby="emailHelp" >
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </body>
+</html>

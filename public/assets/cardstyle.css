@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+#container {
+    padding: 20px;
+    margin: 20px;
+}
+  .clmn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  .container{
+    padding: 30px;
+    margin: 30px;
+  }
+
+  .rw {margin: 0 -5px;}
+  
+
+  .rw:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ #titlu{
+    padding-top : 1000 px;
+    margin-top: 705 px;
+    text-align: center;
+    font-family: Simplifica;
+  }
+
+  @media screen and (max-width: 600px) {
+    .clmn {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+#content{
+  padding:20px;
+  margin: 20 px;
+  max-width: 1120px;
+  
+}
+.itemcard{
+  min-width: 300px;
+  margin-top : 30px;
+}

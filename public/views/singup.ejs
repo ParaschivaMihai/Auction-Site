@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS For Beginners</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <%- include('partials/nav'); %>
+    <div id = "content">
+      <form action = "/singup" method = "post">
+        <h3>
+          Inregistreaza-te!
+        </h3>
+        <br>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Nume</label>
+          <input type="text" class="form-control" name="nume" aria-describedby="emailHelp" placeholder="Introdu numele">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Prenume</label>
+          <input type="text" class="form-control" name="prenume" aria-describedby="emailHelp" placeholder="Introdu prenumele">
+        </div>
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Introdu email">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Numar de telefon</label>
+          <input type="text" class="form-control" name="nr_telefon" aria-describedby="emailHelp" placeholder="Introdu numarul de telefon">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Adresa</label>
+          <input type="text" class="form-control" name="adresa" aria-describedby="emailHelp" placeholder="Introdu adresa">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Parola</label>
+          <input type="password" class="form-control" name = "parola" placeholder="parola">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <br>
+        <br>
+        <p>Ai deja cont?<a  href="http://localhost:3000/login"> Logeaza-te!</a></p>
+      </form>
+    </div>
+  </body>
+</html>

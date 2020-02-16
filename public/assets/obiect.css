@@ -1,0 +1,24 @@
+.container{
+    text-align: left;
+    padding: 25px;
+    margin: 25px;
+    margin-top: 125px;
+}
+
+#col1{
+    max-width: 400px;
+}
+
+#col2{
+    border-left : 4px solid #a3c2c2;
+}
+#btn{
+    margin: 50px;
+}
+
+b{
+    font-size : 25px;
+}
+p{
+    font-size: 20px;
+}

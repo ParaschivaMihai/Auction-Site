@@ -1,0 +1,29 @@
+
+<% if(data.length != 0){ %>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <% let keyNames = Object.keys(data[0]) %>
+            <% keyNames.forEach(function(item){%>
+                <th><%= item%></th>
+            <%}) %>
+        </tr>
+        </thead>
+        <tbody>
+        <% data.forEach(function(item){%>
+            <tr>
+                <% keyNames.forEach(function(property){%>
+                    <td><%= item[property]%></td>
+                <%}) %>
+            </tr>
+        <%}) %>
+        </tbody>
+    </table>
+<%}else{ %>
+    <br>
+    <br>
+    <h4>Niciun obiect !</h4>
+    <br>
+    <br>
+<%}%>
+

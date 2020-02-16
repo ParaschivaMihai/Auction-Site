@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/profile.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <%- include('partials/nav'); %>
+        <div class="container" id = "content">
+            <h1 text-align = "center">
+                Welcome to your profile page !
+            </h1>
+            <br>
+            <div id = "info">
+              <!--
+
+                <h4>Nume</h4>
+                <div class="card">
+                    <div class="card-body">
+                      <%= data.nume %>
+                    </div>
+                  </div>
+
+                  <h4>Prenume</h4>
+                  <div class="card">
+                    <div class="card-body">
+                      <%= data.prenume %>
+                    </div>
+                  </div>
+
+                  <h4>Mail</h4>
+                  <div class="card">
+                    <div class="card-body">
+                      <%= data.mail %>
+                    </div>
+                  </div>
+
+                  <h4>Telefon</h4>
+                  <div class="card">
+                    <div class="card-body">
+                      <%= data.nr_telefon %>
+                    </div>
+                  </div>
+
+                  <h4>Adresa</h4>
+                  <div class="card">
+                    <div class="card-body">
+                      <%= data.adresa %>
+                    </div>
+                  </div>
+                -->
+                <form action = "/profile" method = "post">
+                  <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Nume</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="staticEmail" name = "nume" value= <%= data.nume %>>
+                    </div>
+                  </div>
+
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Prenume</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="staticEmail" name = "prenume" value=<%= data.prenume %>>
+                  </div>
+                </div>
+
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Mail</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="staticEmail" name = "mail" value=<%= data.mail %>>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Telefon</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="staticEmail" name = "nr_telefon" value=<%= data.nr_telefon %>>
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Adresa</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="staticEmail" name = "adresa" value="<%= data.adresa %>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" name = "parola" value=<%= data.parola %>>
+                  </div>
+              </div>
+              <br>
+              <br>
+              <button type="submit" class="btn btn-primary" >Updateaza datele tale</button>
+              <a href="http://localhost:3000/profile/telefon" class="btn  btn-success">Vezi telefonele tale</a>
+              <a href="http://localhost:3000/profile/licitatie" class="btn btn-primary disabled">Vezi telefoanele licitate</a>
+              <a href="http://localhost:3000/profile/adauga" class="btn btn-secondary  disabled">Adauga telefon</a>
+              </form>
+            </div>
+            <br>
+            <br>
+        </div>
+    </body>
+</html>

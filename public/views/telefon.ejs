@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/obiect.css">
+        <link rel="stylesheet" href="/assets/cardstyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <%- include('partials/nav'); %>
+        <div class="container" >
+            <div class="row">
+                <!--
+
+               
+                <div class="col-sm" id = "col2">
+                    <p><b>Model : </b><%= data.nume_model%></p>
+                    <p><b>Proprietar : </b><%= data.nume%> <%= data.prenume%></p>
+                    <p><b>Pret : </b><%= data.pret_initial%> lei</p>
+                    <p><b>Ecran : </b><%= data.marime_ecran%></p>
+                    <p><b>Memorie Ram : </b> <%= data.memorie_ram%></p>
+                    <p><b>Memorie interna : </b> <%= data.memorie%></p>
+                    <p><b>Camera foto : </b> <%= data.camera%></p>
+                    <p><b>Procesor : </b><%= data.model_procesor%></p>
+                    <p><b>Capacitate Baterie : </b>  <%= data.capacitate_baterie%></p>  
+                </div>
+                -->
+            </div>
+            <br>
+            <br>
+            <form  action = "/telefon/:id" method = "post">
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Model</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly  class="form-control" id="staticEmail" value=<%= data.nume_model %>>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Proprietar</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly  class="form-control" id="staticEmail" value=<%= data.prenume%>>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Memorie Ram</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly  class="form-control" id="staticEmail" value=<%= data.memorie_ram %>>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Memorie</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly  class="form-control" id="staticEmail" value=<%= data.memorie %>>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Ecran</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly  class="form-control" id="staticEmail" value=<%= data.marime_ecran %>>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Camera foto</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly  class="form-control" id="staticEmail" value=<%= data.camera %>>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Procesor </label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly  class="form-control" id="staticEmail" value=<%= data.model_procesor %>>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Capacitate baterie </label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly  class="form-control" id="staticEmail" value=<%= data.capacitate_baterie %>>
+                    </div>
+                </div>
+
+                <% if(username == data.mail){ %>
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Pretul telefonului tau</label>
+                  <div class="col-sm-10">
+                    <input type="text" readonly  class="form-control" id="staticEmail" value=<%= data.pret_initial %>>
+                  </div>
+                </div> 
+                <% } else { %>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Liciteaza</label>
+                        <div class="col-sm-10">
+                          <input type="text"   class="form-control" id="staticEmail" name = "pret" value=<%= data.pret_initial %>>
+                          <input type="hidden" id="custId" name="id_telefon" value = <%= data.id_telefon%>>
+                        </div>
+                      </div> 
+                <%}%>
+                <button type="submit" class="btn btn-primary" >Liciteaza !</button>
+              </form>
+          </div>
+    </body>
+</html>

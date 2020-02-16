@@ -1,0 +1,21 @@
+{
+  "name": "bdtema",
+  "version": "1.0.0",
+  "description": "tocami ai citit de aici",
+  "main": "Untitled-1.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "expres": "^0.0.5",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

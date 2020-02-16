@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/admin.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <%- include('partials/linknav'); %>
+        <br>
+        <h6>Esti conectat ca <%= nume %></h6>
+        <form action = "/adminPage/peste2500" method = "post">
+            <div class="form-group row" id="content">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Pret: </label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputPassword" name = "valoare" value = <%= lastvalue %>>
+                  </div>
+                  <button type="submit" id="btn" class="btn btn-primary" >Cauta</button>
+              </div>
+        </form>
+        <%- include('partials/tableViewing'); %>
+        <br>
+        <a href="http://localhost:3000/adminPage/adaugaModel" class="btn btn-secondary btn-lg ">Adauga model telefon</a>
+    </body>
+</html>
